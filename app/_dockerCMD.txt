@@ -1,0 +1,3 @@
+docker run -d --name myphp8 -p 80:80 -v C:/Users/pc104-05/Desktop/Docker/app:/var/www/html php:8-apache
+docker run -d --name mydb --env MARIADB_ROOT_PASSWORD=root -p 3307:3306 mariadb:latest
+docker run -d --link mydb:db --name myadmin -p 8080:8080 adminer
